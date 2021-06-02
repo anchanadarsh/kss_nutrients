@@ -219,7 +219,9 @@
 	<?php include("includes/footer.html") ?>
 	<?php include("includes/include_js.html") ?>
 	<script>
-		ScrollOut();
+		ScrollOut({
+			once:true,
+		});
 		window.addEventListener('load', function () {
 			new Glider(document.querySelector('.product_slider'), {
 				slidesToShow: 1.2,
