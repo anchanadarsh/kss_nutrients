@@ -1,0 +1,36 @@
+.header {
+    background-color: white;
+    padding: 15px;
+    @include sm-down{
+        display: none;
+    }
+
+    .row_flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link_section {
+            display: flex;
+            align-items: center;
+            .social_icons{
+                a{
+                    color: white;
+                }
+            }
+            a{
+                text-decoration: none;
+                padding: 0 10px;
+                color: $color_darkblue;
+                font-size: 18px;
+                font-family: thicccboi_regular;
+            }
+            
+            .link {
+                font-family: thicccboi_semibold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+

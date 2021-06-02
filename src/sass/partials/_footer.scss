@@ -1,0 +1,91 @@
+footer {
+    background-color: $color_primary;
+    padding: 0px 50px;
+
+    @include lg-down {
+        padding: 0px 0px;
+    }
+
+    @include sm-down {
+        padding: 0px 15px;
+    }
+
+    .footer_inner {
+
+        @extend .f_r_a_center;
+        justify-content: space-between;
+        padding: 15px 15px 15px;
+        //        border-top: 1px solid #ddd;
+
+        &:after,
+        &:before {
+            display: none;
+        }
+
+        @include sm-down {
+            flex-direction: column;
+        }
+
+        .copyright_text {
+            font-size: 18px;
+            color: white;
+        }
+
+        .social_links {
+            display: flex;
+            align-items: center;
+            @include sm-down {
+                margin: 10px 0px;
+            }
+            .follow{
+                color: white;
+                font-family: $font_text;
+                margin-right: 5px;
+            }
+        }
+
+        .made_by_ting_sec {
+            .ting-unit-wrap {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                transform: scale(0.7);
+
+                @include md-down {
+                    text-align: center;
+                    justify-content: center;
+                }
+
+                .made-by-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    p {
+                        color: white;
+                        font-weight: 700;
+                        font-family: $font_heading;
+                        background-color: $color_darkblue;
+                        margin-bottom: 3px;
+                        padding: 2px 8px;
+                        border-radius: 3px;
+                        letter-spacing: 2px;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 90px;
+                    margin-left: 5px;
+
+                    &.black-logo {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+$browser-prefixes: false !default;
+
+$placeholder-color-default: #ff6666;
+
+@font-face {
+	font-family: thicccboi_regular;
+	src: url(../fonts/thicccboi/THICCCBOI-Regular.woff2);
+}
+
+@font-face {
+	font-family: thicccboi_semibold;
+	src: url(../fonts/thicccboi/THICCCBOI-SemiBold.woff2);
+}
+
+@font-face {
+	font-family: thicccboi_bold;
+	src: url(../fonts/thicccboi/THICCCBOI-SemiBold.woff2);
+}
+
+$font-bold: 'bold';
+$font-normal: 'normal';
+
+$font_heading: thicccboi_bold;
+$font_text: thicccboi_regular;
+
+/*	============================== #Color ==================================== */
+
+$color_primary:#32abd7;
+$color_darkblue:#0057a2;
+$color_font:#0b243a;
+$gray_bg:#f6f6f6;
