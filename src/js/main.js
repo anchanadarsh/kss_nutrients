@@ -72,9 +72,15 @@ $(document).ready(function (evt) {
 
         $(".link").click(function() {
             var clickedLink = $(this).attr("data-link");
-            $('html, body').animate({
-                scrollTop: $("#"+clickedLink).offset().top
-            }, 800);
+            if(winW<767){
+                $('html, body').animate({
+                    scrollTop: $("#"+clickedLink).offset().top - 60
+                }, 800);
+            }else{
+                $('html, body').animate({
+                    scrollTop: $("#"+clickedLink).offset().top
+                }, 800);
+            }
         });
     }
 

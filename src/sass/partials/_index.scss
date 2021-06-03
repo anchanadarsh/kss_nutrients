@@ -1,4 +1,6 @@
 #index_page {
+    overflow: hidden;
+
     [data-scroll] {
         transition: opacity 1s;
     }
@@ -46,6 +48,7 @@
 
         @include sm-down {
             padding-top: 8%;
+            padding-bottom: 5%;
         }
 
         .scroll_down {
@@ -59,6 +62,7 @@
             @include sm-down {
                 left: 50%;
                 transform: translateX(-50%);
+                flex-direction: column;
             }
 
             .scroll_text {
@@ -70,6 +74,7 @@
 
                 @include sm-down {
                     font-size: 16px;
+                    padding-right: 0;
                 }
             }
         }
@@ -90,9 +95,13 @@
                     color: white;
                     @extend .uppercase;
 
+                    @include mv-media(max, 991px) {
+                        font-size: 50px;
+                    }
+
                     @include sm-down {
                         text-align: center;
-                        font-size: 40px;
+                        font-size: 36px;
                         margin-bottom: 0;
                     }
 
@@ -100,6 +109,10 @@
                         position: absolute;
                         top: -25px;
                         right: 30px;
+
+                        @include mv-media(1024px, 1200px) {
+                            right: 90px;
+                        }
 
                         @include sm-down {
                             right: 0;
@@ -112,6 +125,11 @@
                     font-size: 22px;
                     line-height: 1.4;
                     font-family: $font_text;
+
+                    @include mv-media(max, 991px) {
+                        padding-top: 0;
+                        font-size: 20px;
+                    }
 
                     @include sm-down {
                         text-align: center;
@@ -189,12 +207,22 @@
         padding-top: 5%;
         padding-bottom: 5%;
 
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
         .line1 {
             position: absolute;
             top: -15%;
 
+            @include mv-media(768px, 991px) {
+                top: -34%;
+                left: -10%;
+            }
+
             @include sm-down {
-                top: -13%;
+                top: -24%;
                 left: -80%;
             }
         }
@@ -203,11 +231,20 @@
             position: absolute;
             bottom: -10%;
             z-index: 2;
+
+            @include sm-down {
+                bottom: 38%;
+                right: 0%;
+            }
         }
 
         .about_flex {
             padding-top: 3%;
             padding-bottom: 3%;
+
+            @include sm-down {
+                padding-bottom: 15%;
+            }
 
             .about_img {
                 text-align: center;
@@ -215,7 +252,7 @@
                 width: 45%;
 
                 @include sm-down {
-                    width: 90%;
+                    width: 80%;
                 }
 
                 .ring {
@@ -226,6 +263,7 @@
 
                     @include sm-down {
                         width: 50px;
+                        transform: translateX(-50%);
                     }
                 }
 
@@ -237,6 +275,7 @@
 
                     @include sm-down {
                         width: 50px;
+                        transform: translateX(50%);
                     }
                 }
 
@@ -249,17 +288,18 @@
                 width: 45%;
 
                 @include sm-down {
-                    width: 90%;
+                    width: 80%;
                     text-align: center;
-                    br{
-                        display: none;
-                    }
                 }
 
                 .about_title {
                     @extend .section_title;
                     margin-bottom: 30px;
                     color: $color_primary;
+
+                    @include sm-down {
+                        margin: 2.5rem 0;
+                    }
 
                     .sparkling_img {
                         position: absolute;
@@ -283,11 +323,28 @@
         padding-top: 5%;
         padding-bottom: 5%;
 
+        @include sm-down {
+            padding-top: 10%;
+            padding-bottom: 20%;
+        }
+
         .section_title {
+            @include sm-down {
+                padding-left: 10%;
+                padding-right: 10%;
+                br {
+                    display: none;
+                }
+            }
+
             .sparkling_img {
                 position: absolute;
                 top: -30px;
                 right: -55px;
+                @include sm-down{
+                    top: -40px;
+                    right: 10px;
+                }
             }
         }
 
@@ -295,8 +352,13 @@
             padding-top: 10%;
             padding-bottom: 5%;
 
+            @include mv-media(768px,991px){
+                padding-top: 30%;
+            }
+
             @include sm-down {
                 padding-top: 28%;
+                margin-right: -15px;
             }
 
             .product_info {
@@ -353,6 +415,10 @@
                         color: white;
                         @extend .uppercase;
 
+                        @include sm-down {
+                            padding: 5px 10px;
+                        }
+
                         img {
                             padding-left: 20px;
                             width: 40px;
@@ -369,19 +435,24 @@
         padding-bottom: 5%;
 
         @include sm-down {
-            padding-top: 10%;
+            padding-top: 20%;
+            padding-bottom: 10%;
         }
 
         .line3 {
             position: absolute;
 
-            @include sm-down {
-                left: -140%;
-                top: -133%;
+            @include mv-media(1200px,1400px){
+                top: -40%;
             }
 
-            @include mv-media(1200px, 1400px) {
-                width: 90%;
+            @include mv-media(768px, 1200px) {
+                display: none;
+            }
+
+            @include sm-down {
+                left: -111%;
+                top: -122%;
             }
         }
 
@@ -390,9 +461,14 @@
             top: 35%;
             left: 10%;
 
+            @include mv-media(768px, 1200px) {
+                width: 50px;
+                left: 1%;
+            }
+
             @include sm-down {
                 width: 50px;
-                top: 2%;
+                top: 6%;
             }
         }
 
@@ -400,6 +476,11 @@
             position: absolute;
             bottom: 5%;
             right: 5%;
+
+            @include mv-media(768px, 1200px) {
+                width: 50px;
+                right: 1%;
+            }
 
             @include sm-down {
                 width: 50px;
@@ -409,12 +490,25 @@
         }
 
         .section_title {
-            margin-bottom: 10%;
+            margin-bottom: 0;
+
+            @include sm-down {
+                padding-left: 10%;
+                padding-right: 10%;
+
+                br {
+                    display: none;
+                }
+            }
 
             .sparkling_img {
                 position: absolute;
                 top: -30px;
                 right: -55px;
+
+                @include sm-down {
+                    right: 10px;
+                }
             }
         }
 
@@ -469,13 +563,20 @@
                     }
 
                     .address_title {
-                        width: 30%;
+                        width: 22%;
                         font-size: 20px;
                         font-family: thicccboi_semibold;
                         color: $color_darkblue;
                         @extend .uppercase;
                         display: flex;
-                        justify-content: flex-end;
+
+                        @include mv-media(1024px, 1200px) {
+                            width: 30%;
+                        }
+
+                        @include mv-media(768px, 991px) {
+                            width: 35%;
+                        }
 
                         @include sm-down {
                             justify-content: center;
@@ -527,7 +628,7 @@
                     transform: translateX(50%);
                     z-index: -1;
 
-                    @include sm-down {
+                    @include md-down {
                         width: 50px;
                     }
                 }
@@ -538,7 +639,7 @@
                     left: 0;
                     transform: translateX(-50%);
 
-                    @include sm-down {
+                    @include md-down {
                         width: 50px;
                     }
                 }

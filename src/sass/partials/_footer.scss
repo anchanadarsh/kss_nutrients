@@ -29,6 +29,9 @@ footer {
         .copyright_text {
             font-size: 18px;
             color: white;
+            @include sm-down{
+                text-align: center;
+            }
         }
 
         .social_links {

@@ -24,6 +24,9 @@
                 color: $color_darkblue;
                 font-size: 18px;
                 font-family: thicccboi_regular;
+                @include mv-media(max,991px){
+                    font-size: 16px;
+                }
             }
             
             .link {

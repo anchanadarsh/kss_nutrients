@@ -39,8 +39,6 @@
 							</div>
 						</div>
 					</div>
-					<div>your content</div>
-					<div>your content</div>
 				</div>
 			</div>
 		</section>
@@ -152,13 +150,16 @@
 							class="sparkling_img"><img src="img/sparkle.png" alt="Sparkling Image"></span></h2>
 				</div>
 				<h3 class="section_subtitle" data-scroll>Founded in the year 2000 by Mr. Vivekanand Kejriwal</h3>
-				<p class="para" data-scroll>KSS group has successfully been catering to the requirements of its customers for more
+				<p class="para" data-scroll>KSS group has successfully been catering to the requirements of its
+					customers for more
 					than 10 years. We help you succeed by providing you with the best solutions, so that you can give
 					high-quality and <span class="bold">hygienic nutrition</span> to your customers.</p>
-				<p class="para" data-scroll><span class="bold">KSS Group</span> believes in assessing the needs and requirements of
+				<p class="para" data-scroll><span class="bold">KSS Group</span> believes in assessing the needs and
+					requirements of
 					its customers through close-knit sales and distribution channels. We help you make sure that you are
 					up-to-date with the regulations and requirements related to the animal industry.</p>
-				<p class="para" data-scroll>We aim to be one of the leading players in the <span class="bold">animal feed supplement
+				<p class="para" data-scroll>We aim to be one of the leading players in the <span class="bold">animal
+						feed supplement
 						industry</span> by collaborating and providing you with innovative results that help you
 					navigate your way in maximising performance.</p>
 			</div>
@@ -220,13 +221,12 @@
 	<?php include("includes/include_js.html") ?>
 	<script>
 		ScrollOut({
-			once:true,
+			once: true,
 		});
 		window.addEventListener('load', function () {
 			new Glider(document.querySelector('.product_slider'), {
 				slidesToShow: 1.2,
 				draggable: true,
-				dots: '.dots',
 				responsive: [{
 					// screens greater than >= 775px
 					breakpoint: 775,
@@ -238,7 +238,7 @@
 					// screens greater than >= 1024px
 					breakpoint: 1024,
 					settings: {
-						slidesToShow: 4.2,
+						slidesToShow: 3.2,
 					}
 				}]
 
@@ -251,6 +251,10 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 			});
+			var dots = $(".slick-dots li");
+			if (dots.length == 1) {
+				$(".slick-dots").css("display", "none");
+			}
 		});
 		//for letters only
 		$.validator.addMethod("lettersonly", function (value, element) {
