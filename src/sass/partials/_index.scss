@@ -116,7 +116,7 @@
 
                         @include sm-down {
                             top: -20px;
-                            right: 25px;
+                            right: 15px;
 
                             img {
                                 width: 30px;
@@ -370,7 +370,7 @@
 
                 @include sm-down {
                     top: -25px;
-                    right: 30px;
+                    right: 20px;
                 }
 
                 img {
@@ -540,7 +540,7 @@
                 right: -55px;
 
                 @include sm-down {
-                    right: 35px;
+                    right: 25px;
                     top: -15px;
 
                     img {
