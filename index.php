@@ -75,17 +75,17 @@
 				</article>
 			</div>
 		</section>
-		<section class="product" id="products">
+		<section class="product" id="products" data-scroll>
 			<div class="container-fluid">
-				<div class="text-center" data-scroll>
+				<div class="text-center">
 					<h2 class="section_title">Explore our range of feed <br> supplement formulations<span
 							class="sparkling_img"><img src="img/sparkle.png" alt="Sparkling Image"></span></h2>
 				</div>
 				<div class="product_slider">
 					<div class="product_info">
-						<div class="product_image" data-scroll>
+						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
-							<img src="img/maxavail.png" alt="Product Image" class="img-responsive">
+							<img src="img/01.png" alt="Product Image" class="img-responsive">
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">Maxavail</h3>
@@ -94,9 +94,9 @@
 						</div>
 					</div>
 					<div class="product_info">
-						<div class="product_image" data-scroll>
+						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
-							<img src="img/maxavail.png" alt="Product Image" class="img-responsive">
+							<img src="img/02.png" alt="Product Image" class="img-responsive">
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">TopCox</h3>
@@ -105,9 +105,9 @@
 						</div>
 					</div>
 					<div class="product_info">
-						<div class="product_image" data-scroll>
+						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
-							<img src="img/maxavail.png" alt="Product Image" class="img-responsive">
+							<img src="img/03.png" alt="Product Image" class="img-responsive">
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">PowerCox</h3>
@@ -116,23 +116,45 @@
 						</div>
 					</div>
 					<div class="product_info">
-						<div class="product_image" data-scroll>
+						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
-							<img src="img/maxavail.png" alt="Product Image" class="img-responsive">
+							<img src="img/04.png" alt="Product Image" class="img-responsive">
 						</div>
 						<div class="product_desc">
-							<h3 class="product_title">Maxavail</h3>
+							<h3 class="product_title">Windine</h3>
 							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
 					<div class="product_info">
-						<div class="product_image" data-scroll>
+						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
-							<img src="img/maxavail.png" alt="Product Image" class="img-responsive">
+							<img src="img/05.png" alt="Product Image" class="img-responsive">
 						</div>
 						<div class="product_desc">
-							<h3 class="product_title">Maxavail</h3>
+							<h3 class="product_title">Wintide</h3>
+							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+									src="img/download.png" class="" alt="download image"></a>
+						</div>
+					</div>
+					<div class="product_info">
+						<div class="product_image">
+							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
+							<img src="img/06.png" alt="Product Image" class="img-responsive">
+						</div>
+						<div class="product_desc">
+							<h3 class="product_title">Enramax</h3>
+							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+									src="img/download.png" class="" alt="download image"></a>
+						</div>
+					</div>
+					<div class="product_info">
+						<div class="product_image">
+							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
+							<img src="img/07.png" alt="Product Image" class="img-responsive">
+						</div>
+						<div class="product_desc">
+							<h3 class="product_title">Omnicox</h3>
 							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
