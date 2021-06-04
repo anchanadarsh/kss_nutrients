@@ -22,9 +22,9 @@
 		<!--  insert body content  -->
 		<section class="banner" id="banner">
 			<div class="container">
-				<div class="scroll_down">
+				<!-- <div class="scroll_down">
 					<p class="scroll_text">Scroll down</p><img src="img/scroll.png" alt="Scroll Image">
-				</div>
+				</div> -->
 				<div class="banner_slider">
 					<div class="">
 						<div class="flex-item">
@@ -93,7 +93,7 @@
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
-					<div class="product_info">
+					<!-- <div class="product_info">
 						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
 							<img src="img/02.png" alt="Product Image" class="img-responsive">
@@ -103,7 +103,7 @@
 							<a href="img/topcox.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
-					</div>
+					</div> -->
 					<div class="product_info">
 						<div class="product_image">
 							<img src="img/left_sparkle.png" class="left_sparkle" alt="Sparkling Image">
@@ -168,7 +168,7 @@
 			<img src="img/slanting_lines_box.png" class="slanting_lines_box" alt="Slanting Lines Box Image">
 			<div class="container">
 				<div class="text-center" data-scroll>
-					<h2 class="section_title">Helping you provide the<br>best to your customers<span
+					<h2 class="section_title">Helping you provide the<br> best to your customers<span
 							class="sparkling_img"><img src="img/sparkle.png" alt="Sparkling Image"></span></h2>
 				</div>
 				<h3 class="section_subtitle" data-scroll>Founded in the year 2000 by Mr. Vivekanand Kejriwal</h3>
@@ -214,7 +214,7 @@
 					<div class="contact_form" data-scroll>
 						<img src="img/slanting_lines_box.png" class="slanting_lines" alt="Slanting Lines Image">
 						<img src="img/lightblue_ring.png" class="lightblue_ring" alt="Lightblue Ring Image">
-						<form id="contact-form">
+						<form action="submit.php" id="contact-form" method="post">
 							<div class="input-field">
 								<input name="fullname" id="fullname" type="text" class="validate">
 								<label for="fullname">Full Name</label>
@@ -232,6 +232,7 @@
 								<label for="message">Message</label>
 							</div>
 							<input type="submit" class="submit_btn">
+							<p id="thank-you-msg">Thank You</p>
 						</form>
 					</div>
 				</div>
@@ -329,16 +330,17 @@
 			}
 		});
 
-		// $("#enquiry-form").ajaxForm({
-		// 	success: function ($response) {
-		// 		if ($response == 1) {
-		// 			$('#thank-you-msg').show();
-		// 			setTimeout(function () {
-		// 				$('#thank-you-msg').hide();
-		// 			}, 5000);
-		// 		}
-		// 	}
-		// });
+		$("#contact-form").ajaxForm({
+			success: function ($response) {
+				if ($response == 1) {
+					document.getElementById("contact-form").reset();
+					$('#thank-you-msg').show();
+					setTimeout(function () {
+						$('#thank-you-msg').hide();
+					}, 5000);
+				}
+			}
+		});
 	</script>
 </body>
 
