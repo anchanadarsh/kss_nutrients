@@ -89,7 +89,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">Maxavail</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/maxavail.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
@@ -100,7 +100,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">TopCox</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/topcox.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
@@ -111,7 +111,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">PowerCox</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/powercox.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
@@ -122,7 +122,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">Windine</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/windine.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">Wintide</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/wintide.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
@@ -144,7 +144,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">Enramax</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/enramax.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
@@ -155,7 +155,7 @@
 						</div>
 						<div class="product_desc">
 							<h3 class="product_title">Omnicox</h3>
-							<a href="/images/myw3schoolsimage.jpg" class="download_btn" download>download brochure<img
+							<a href="img/omnicox.pdf" class="download_btn" download>download brochure<img
 									src="img/download.png" class="" alt="download image"></a>
 						</div>
 					</div>
