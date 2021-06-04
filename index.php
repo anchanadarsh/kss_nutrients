@@ -200,11 +200,11 @@
 							<p class="address_desc">Suite No 19-15, Level 19 Centro Mall, No.8, Jalan Batu Tiga Lama,
 								41300 Klang, Selangor.</p>
 						</div>
-						<div class="contact_details_desc">
+						<!-- <div class="contact_details_desc">
 							<p class="address_title"><span class="icon"><i
 										class="fas fa-phone phone"></i></span><span>phone:</span></p>
 							<p class="address_desc"><a href="tel:+91 129 2980192">+91 129 2980192</a></p>
-						</div>
+						</div> -->
 						<div class="contact_details_desc">
 							<p class="address_title"><span class="icon"><i
 										class="fas fa-envelope"></i></span><span>email:</span></p>
