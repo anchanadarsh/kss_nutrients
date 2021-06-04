@@ -58,28 +58,131 @@ $(document).ready(function (evt) {
         $('#nav-icon3').trigger('click');
     })
 
-    console.log(`window width is ${winW}`);
+    // console.log(`window width is ${winW}`);
 
     //=====================================index page script========================================
     if (indexPage == 1) {
         var containerWidth = $(".container").outerWidth();
-        var paddLeft = (winW-containerWidth)/2;
-        if(winW<767){
-            $(".product_slider").css("margin-left",'0');
-        }else{
-            $(".product_slider").css("margin-left",paddLeft);
+        var paddLeft = (winW - containerWidth) / 2;
+        if (winW < 767) {
+            $(".product_slider").css("margin-left", '0');
+        } else {
+            $(".product_slider").css("margin-left", paddLeft);
         }
 
-        $(".link").click(function() {
+        ScrollOut({
+            once: true,
+        });
+
+        $(".link").click(function () {
             var clickedLink = $(this).attr("data-link");
-            if(winW<767){
+            if (winW < 767) {
                 $('html, body').animate({
-                    scrollTop: $("#"+clickedLink).offset().top - 60
+                    scrollTop: $("#" + clickedLink).offset().top - 60
                 }, 800);
-            }else{
+            } else {
                 $('html, body').animate({
-                    scrollTop: $("#"+clickedLink).offset().top
+                    scrollTop: $("#" + clickedLink).offset().top
                 }, 800);
+            }
+        });
+
+        new Glider(document.querySelector('.product_slider'), {
+            slidesToShow: 1.2,
+            draggable: true,
+            responsive: [{
+                // screens greater than >= 775px
+                breakpoint: 775,
+                settings: {
+                    // Set to `auto` and provide item width to adjust to viewport
+                    slidesToShow: 3.5,
+                }
+            }, {
+                // screens greater than >= 1024px
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3.2,
+                }
+            }]
+
+        })
+
+        $('.banner_slider').slick({
+            dots: true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+        var dots = $(".slick-dots li");
+        if (dots.length == 1) {
+            $(".slick-dots").css("display", "none");
+        }
+
+        //for letters only
+        $.validator.addMethod("lettersonly", function (value, element) {
+            return this.optional(element) || /^[a-zA-Z][a-zA-Z ]+$/i.test(value);
+        });
+
+        //for email only
+        $.validator.addMethod("emailtest", function (value, element) {
+            return this.optional(element) || /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/i.test(value);
+        });
+
+
+        $("#contact-form").validate({
+            rules: {
+                fullname: {
+                    required: true,
+                    lettersonly: true,
+                    minlength: 2
+                },
+                cmpname: {
+                    required: true,
+                    lettersonly: true,
+                    minlength: 2
+                },
+                email: {
+                    emailtest: true,
+                    required: true,
+                    email: true
+                },
+                message: {
+                    required: true
+                }
+            },
+            messages: {
+                fullname: {
+                    required: "This field is required",
+                    lettersonly: "Please enter a text only"
+                },
+                cmpname: {
+                    required: "This field is required",
+                    lettersonly: "Please enter a text only"
+                },
+                email: {
+                    required: "This field is required",
+                    emailtest: "Please enter a valid email address"
+                },
+                message: {
+                    required: "This field is required"
+                }
+            },
+            submitHandler: function (form) {
+                $.ajax({
+                    url: 'https://api.apispreadsheets.com/data/13537/',
+                    type: 'post',
+                    data: $("#contact-form").serializeArray(),
+                    success: function () {
+                        document.getElementById("contact-form").reset();
+                        $('#thank-you-msg').show();
+                        setTimeout(function () {
+                            $('#thank-you-msg').hide();
+                        }, 5000);
+                    },
+                    error: function () {
+                        alert("There was an error");
+                    }
+                });
             }
         });
     }
@@ -115,7 +218,7 @@ $(window).on('scroll', function (e) {
 });
 
 //################################### window resize function ###########################################
-$(window).on('resize', function () {});
+$(window).on('resize', function () { });
 
 //################### window orientation change function ############################
 window.addEventListener("orientationchange", function () {
